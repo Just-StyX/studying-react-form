@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Georgia,  sans-serif;
+  font-family: Georgia, sans-serif;
   background: #639;
 }
 
@@ -29,7 +29,7 @@ form {
   padding-top: 40px;
   padding-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.75);
 }
 
 .main-container {
@@ -56,4 +56,15 @@ form {
 }
 .white-content {
   background: #e4e4e4;
+}
+.dark {
+  background-color: #21222a;
+}
+.toggleDark {
+  width: 60px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+  margin-top: 10px;
 }

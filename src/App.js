@@ -1,7 +1,6 @@
 import React from "react";
 import Form from './Form'
 import SignUpForm from "./SignUpForm"
-import Header from './Header'
 import "./style.css";
 
 export default function App() {
@@ -14,7 +13,10 @@ export default function App() {
     employment: "",
     favColor: ""
   })
-
+  const [darkMode, setDarkMode] = React.useState(true)
+  const toggleDark = () => {
+    setDarkMode(prev => !prev)
+  }
   const handleClick = (e) => {
       const {name, value, type, checked} = e.target
 
@@ -30,8 +32,7 @@ export default function App() {
   }
   return (
     <div>
-      <Header />
-      <SignUpForm />
+      <SignUpForm darkMode={darkMode} toggleDark={toggleDark}/>
       {/*<Form formData={formData} handle={handleClick} submit={handleSubmit}/>*/}
     </div>
   );

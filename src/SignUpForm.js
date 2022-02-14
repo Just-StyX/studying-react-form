@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SignUpForm = () => {
+const SignUpForm = (props) => {
   const [sign, setSign] = React.useState({
     email: '',
     password: '',
@@ -30,7 +30,7 @@ const SignUpForm = () => {
   return (
     <div className="main-container">
       <div className="container">
-        <form onSubmit={handleSignSubmit} className="signform">
+        <form onSubmit={handleSignSubmit} className="signform" className={props.darkMode ? "dark" : ""}>
           <input
             type="emal"
             placeholder="Email"
@@ -66,6 +66,9 @@ const SignUpForm = () => {
           />
           <button className="button">Sign Up</button>
         </form>
+        <div>
+          <p>light <span onClick={props.toggleDark} className="toggleDark">Toggle</span> dark</p>
+        </div>
       </div>
     </div>
   );
