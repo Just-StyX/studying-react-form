@@ -1,6 +1,7 @@
 import React from "react";
 import Form from './Form'
 import SignUpForm from "./SignUpForm"
+import Header from './Header'
 import "./style.css";
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
   }
   return (
     <div>
+      <Header />
       <SignUpForm />
       {/*<Form formData={formData} handle={handleClick} submit={handleSubmit}/>*/}
     </div>
